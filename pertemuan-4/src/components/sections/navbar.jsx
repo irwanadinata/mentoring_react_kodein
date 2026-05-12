@@ -1,11 +1,14 @@
+import burgericon from "../../assets/burgerIcon.png";
+import logo from "../../assets/logo.png";
+
 function Navbar() {
   return (
     <div className="navbar">
         <div className="logoMerk">
-            <div><img src="" alt="" /></div>
+            <div><img src={logo} alt="" /></div>
             <div className="navbarMerk">Lasles<span className="navbarVpnWord">VPN</span></div>
             <div className="burgerIcon">
-                <img src="assets/burgerIcon.png" alt="" srcset=""/>
+                <img src={burgericon} alt="" srcSet="" />
             </div>
         </div>
         <div className="mainRoute">

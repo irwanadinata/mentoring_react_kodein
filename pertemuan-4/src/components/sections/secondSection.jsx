@@ -1,8 +1,10 @@
+import securityImage from "../../assets/security.png"
+
 function SecondSection() {
   return (
     <div className="secondSectionContainer">
       <div>
-        <img src="assets/security.png" alt="" srcset="" />
+        <img src={securityImage} alt="" srcset="" />
       </div>
       <div className="secondSectionRight" />
       <h1 className="secondSectionRightTitle">Your Security is our priority</h1>

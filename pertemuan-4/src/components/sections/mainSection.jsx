@@ -1,3 +1,7 @@
+import mainImage from "../../assets/mainImage.png"
+import appstore from "../../assets/appleStore.png"
+import playstore from "../../assets/playStore.png"
+
 function MainSection() {
   return (
     <div className="mainSection">
@@ -13,13 +17,13 @@ function MainSection() {
         <div className="buttonDownloadGroup">
           <button className="buttonDownload">
             <div>
-              <img src="assets/appleStore.png" alt="" />
+              <img src={appstore} alt="" />
             </div>
             <div className="buttonDownloadText">Get on Iphone</div>
           </button>
           <button className="buttonDownload">
             <div>
-              <img src="assets/playStore.png" alt="" srcset="" />
+              <img src={playstore} alt="" srcSet="" />
             </div>
             <div className="buttonDownloadText">Get on Android</div>
           </button>
@@ -27,9 +31,9 @@ function MainSection() {
       </div>
       <div>
         <img
-          src="assets/mainImage.png"
+          src={mainImage}
           alt="main image"
-          srcset=""
+          srcSet=""
           className="mainImage"
         />
       </div>
@@ -52,7 +56,7 @@ function MainSection() {
           </button>
           <button className="buttonDownload">
             <div>
-              <img src="assets/playStore.png" alt="" srcset="" />
+              <img src="assets/playStore.png" alt="" srcSet="" />
             </div>
             <div className="buttonDownloadText">Get on Android</div>
           </button>
