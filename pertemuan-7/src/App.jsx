@@ -7,8 +7,8 @@ function App() {
 
   //useEffect
   useEffect(()=>{
-    //axios.get("url backend")
-  }, [])
+    console.log("useEffect berjalan")
+  }, [count])
 
   return (
     <>
