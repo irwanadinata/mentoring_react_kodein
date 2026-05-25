@@ -1,0 +1,22 @@
+import axios from "axios";
+
+//GET DATA
+export const getData = async () => {
+    try {
+        const respon = await axios.get(`${import.meta.env.VITE_API_URL}/users`)
+        console.log(respon.data)
+        return respon.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+//POST DATA
+export const createData = async (data) => {
+    try {
+        const respon = await axios.post(`${import.meta.env.VITE_API_URL2}${import.meta.env.VITE_API_KEY}/users`, data)
+        return respon
+    } catch (error) {
+        console.log(error)
+    }
+}
