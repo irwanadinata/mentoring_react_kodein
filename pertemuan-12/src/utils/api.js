@@ -26,16 +26,17 @@ export const createData = async (data) => {
   }
 };
 
-// PUT DATA
+//PUT DATA
 export const updateData = async (id, data) => {
   try {
-    const response = await axios.put(
+    const respon = await axios.put(
       `${import.meta.env.VITE_API_URL2}${import.meta.env.VITE_API_KEY}/users/${id}`,
-      data
+      data,
     );
-
-    return response.data;
+    console.log(respon);
+    return respon
   } catch (error) {
-    throw error
+    console.log(error);
+    throw error;
   }
 };

@@ -9,36 +9,29 @@ function Contact() {
     email: "",
   });
 
-  // HANDLE INPUT
   const handleChange = (event) => {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
+    setForm({ ...form, [event.target.name]: event.target.value });
   };
 
-  // PUT
   const handleUpdate = async (event) => {
     event.preventDefault();
-
     try {
       const response = await updateData(form.id, {
         nama: form.nama,
         email: form.email,
       });
-
       console.log(response);
-
       alert("Data berhasil diupdate");
 
-      // reset form
+      //untuk mengosongkan form
       setForm({
         id: "",
         nama: "",
         email: "",
       });
+
     } catch (error) {
-      alert(error);
+      alert("Data gagal diupdate");
     }
   };
 
@@ -46,28 +39,27 @@ function Contact() {
     <>
       <Navbar />
       <h2>Ini halaman Contact</h2>
-      <h2>Belajar PUT API</h2>
+      <h2>Belajar PUT/update API</h2>
       <form onSubmit={handleUpdate}>
-        <label>ID:</label>
+        <label htmlFor="">ID :</label>
         <input type="text" name="id" value={form.id} onChange={handleChange} />
-        <br />
-        <label>Nama:</label>
+
+        <label htmlFor="">Nama :</label>
         <input
           type="text"
           name="nama"
           value={form.nama}
           onChange={handleChange}
         />
-        <br />
-        <label>Email:</label>
+
+        <label htmlFor="">Email :</label>
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
         />
-        <br />
-        <button type="submit">Update PUT</button>
+        <button type="submit">Update</button>
       </form>
     </>
   );
