@@ -3,6 +3,7 @@ import Home from "../pages/Home"
 import Profile from "../pages/Profile"
 import Contact from "../pages/Contact";
 import Huhuh from "../pages/not-found";
+import Delete from "../pages/delete";
 
 export default function Router () {
     const router = createBrowserRouter([
@@ -21,6 +22,10 @@ export default function Router () {
         {
             path: "/contact",
             element: <Contact/>
+        },
+        {
+            path: "/delete",
+            element: <Delete/>
         }
     ])
 
